@@ -27,6 +27,10 @@ const faqSchema = new mongoose.Schema({
   reports: [reportSchema],
   viewCount: { type: Number, default: 0 },
   source: { type: String, enum: ['student', 'admin', 'ai'], default: 'student' },
+  embedding: {
+  type: [Number],
+  default: []
+},
   createdAt: { type: Date, default: Date.now }
 });
 
